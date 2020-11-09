@@ -10,9 +10,27 @@ public Dice(){
    type ="Six Sided";
 }
 
+//Second constructor that accepts an integer as a parameter to set number of sides
+//s is a local variable
+public Dice(int s){
+   sides = s;
+   type = s + "sided";
+}
+
 //Method called roll that accepts no parameters and returns a random number from the sides
 public int roll(){
   return (int)(Math.random()*sides)+1;
+}
+
+public String getType(){
+  return type;
+}
+
+
+
+//Default to String method to return a string 
+public String toString(){
+  return "The number of sides of your dice is: "+sides;
 }
 
 
