@@ -8,7 +8,12 @@ class Main {
     }
 
     System.out.println(d6);// implicitly calls the toString method
-    System.out.println(d6.getType());
+    System.out.println(d6.getType());// calls the getType method
+
+    d6.setType("Default Dice"); //changes the variable type to Default Dice
+    System.out.println(d6.getType());// calls the getType method
+
+   
 
     System.out.println("===============D20==============");
     Dice d20 = new Dice(20);
