@@ -13,7 +13,7 @@ public class Dice {
 
   // Second constructor that accepts an integer as a parameter to set number of
   // sides
-  // s is a local variable
+  // s is a local/temp variable
   public Dice(int s) {
     sides = s;
     type = s + "sided";
@@ -38,6 +38,11 @@ public class Dice {
   // Default to String method to return a string
   public String toString() {
     return "The number of sides of your dice is: " + sides;
+  }
+
+//Compares the tyoe variable from two different objects this -- calling one and temp is the object that gets passed.  Must use .equals to compare strings == to compare ints.
+  public boolean sameType(Dice temp){
+    return (this.getType().equals(temp.getType()));
   }
 
 }

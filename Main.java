@@ -1,5 +1,8 @@
+import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+
     // Class name object name = new Class name
     Dice d6 = new Dice();
 
@@ -30,6 +33,16 @@ class Main {
     for (int i = 0; i < 10; i++) {
       System.out.println(d250.roll());// d250 is object roll is the method
     }
+   
+    System.out.println("Please enter the number of sides for your dice");
+    int number = input.nextInt();
+    
+    Dice dUser = new Dice(number);
+    
+    System.out.println(dUser);
+
+     System.out.println(d6.sameType(d20));
+     //System.out.println(d6.equals(d20));
 
   }
 }
